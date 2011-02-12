@@ -1,0 +1,13 @@
+#TeXlipse project settings
+#Mon Feb 07 10:44:39 CST 2011
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=a_hackers_registry.tex
+outputFile=a_hackers_registry.pdf
+langSpell=en
+markDer=true
+srcDir=

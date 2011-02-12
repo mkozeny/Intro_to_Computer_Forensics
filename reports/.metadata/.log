@@ -1,0 +1,21 @@
+!SESSION 2011-02-07 10:42:45.222 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-02-07 10:46:21.985
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-02-07 10:46:21.985
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@13c8bb1),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@7aed3a,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1ca9f78)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@dc4c81)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@13c8bb1),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@7aed3a,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@1ca9f78)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@dc4c81)),sourcePriority=1064961)
+
+!ENTRY net.sourceforge.texlipse 4 4 2011-02-07 10:47:19.130
+!MESSAGE Error while parsing the LaTeX output. Please consult the console output

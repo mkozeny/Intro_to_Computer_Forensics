@@ -1,0 +1,311 @@
+\title{A Hacker's Registry}
+\author{
+        Martin Kozeny\\
+        CSCI 4623: Digital Forensics\\
+        Spring 2011
+        University of New Orleans
+}
+\date{\today}
+
+\documentclass[5pt]{article}
+\setlength{\hoffset}{-2.3cm} 
+\setlength{\voffset}{-3cm}
+\setlength{\textheight}{24.0cm} 
+\setlength{\textwidth}{16cm}
+
+
+\begin{document}
+\maketitle
+
+
+
+\section{Recovery}
+Using AccessData's registry viewer, me and my colleague managed to get this
+information from a laptop belonging to the thief.
+
+\begin{itemize}
+  \item Time zone information
+  \begin{table}[ht]
+  \centering
+  \caption{Time zone information}
+  \begin{tabular}{|l|l|}
+  \hline
+    Last Written Time  & 4/2/2006 15:56:45 UTC  \\
+  \hline
+  Standard Start Date & Last Sun in Oct at 2:00:00 AM Local\\
+  \hline
+  Daylight Start Date & First Sun in Apr at 2:00:00 AM Local  \\ 
+  \hline
+  Standard Bias  & 0 \\ 
+  \hline
+  Daylight Bias & -60 \\ 
+  \hline
+  StandardName (REG\_SZ) & Eastern Standard Time \\ 
+  \hline
+  
+  
+  \end{tabular}
+  \label{tab:timeZoneTab}
+\end{table}
+
+\item Computer name
+\begin{table}[ht]
+  \centering
+  \caption{Computer name}
+  \begin{tabular}{|l|l|}
+  \hline
+    Last Written Time  & 8/7/2004 17:51:36 UTC  \\
+  \hline
+  ComputerName (REG\_SZ) & YOUR-4105E587B6\\
+  
+  \hline
+  
+  
+  \end{tabular}
+  \label{tab:compNameTab}
+\end{table}
+
+\newpage
+
+\item Networking information
+\begin{table}[ht]
+  \centering
+  \caption{Networking information}
+  \begin{tabular}{|l|l|l|}
+  \hline
+  Name & Type & Data\\
+  \hline
+  \hline
+  
+  UseZeroBroadcast &	REG\_DWORD & 	0x00000000 (0)\\
+  \hline
+EnableDHCP &	REG\_DWORD &	0x00000001 (1)\\
+\hline
+IPAddress &	REG\_MULTI\_SZ &	0.0.0.0\\
+\hline
+SubnetMask &	REG\_MULTI\_SZ &	0.0.0.0\\
+\hline
+DefaultGateway & 	REG\_MULTI\_SZ & \\
+\hline 	
+DefaultGatewayMetric &	REG\_MULTI\_SZ & \\
+\hline 	
+NameServer &	REG\_SZ &	(value not set)\\
+\hline
+Domain &	REG\_SZ &	(value not set)\\
+\hline
+RegistrationEnabled &	REG\_DWORD &	0x00000001 (1)\\
+\hline
+RegisterAdapterName &	REG\_DWORD &	0x00000000 (0)\\
+\hline
+TCPAllowedPorts &	REG\_MULTI\_SZ & \\
+\hline 	
+UDPAllowedPorts & REG\_MULTI\_SZ & \\
+\hline 	
+RawIPAllowedProtocols &	REG\_MULTI\_SZ & \\
+\hline 	
+AddressType &	REG\_DWORD 	0x00000000 (0) & \\
+\hline
+DisableDynamicUpdate &	REG\_DWORD &	0x00000000 (0)\\
+  
+  \hline
+  
+  
+  \end{tabular}
+  \label{tab:netInfoTab}
+\end{table}
+
+ 
+
+\item Hardware configuration
+\begin{table}[ht]
+  \centering
+  \caption{Hardware configuration}
+  \begin{tabular}{|l|l|l|}
+  \hline
+  Name & Type & Data\\
+  \hline
+  \hline
+  
+  Capabilities & REG\_DWORD & 0x00000030 (48) \\
+  \hline
+HardwareID & REG\_MULTI\_SZ & ACPI/AuthenticAMD\_\ldots\\
+\hline
+& & *AuthenticAMD\_-\_x86\_Family\_15\_Model\_15 \\
+\hline
+&  & ACPI/AuthenticAMD\_-\_x86\_Family\_15 \\
+\hline
+& &  *AuthenticAMD\_-\_x86\_Family\_15 \\
+\hline 	
+& & ACPI/AuthenticAMD\_-\_x86 \\
+\hline 	
+& &	*AuthenticAMD\_-\_x86 \\
+\hline
+CompatibleIDs &	REG\_MULTI\_SZ & ACPI/Processor\\
+\hline
+ClassGUID &	REG\_SZ & \{50127DC3-0F36-415E-A6CC-4CB\ldots\\
+\hline
+Class &	REG\_SZ & Processor \\
+\hline
+Driver & REG\_SZ & \{50127DC3-0F36-415E-A6CC-4CB3\ldots\\
+\hline 	
+Mfg & REG\_SZ &	Advanced Micro Devices\\
+\hline 	
+Service & REG\_SZ & AmdK8\\
+\hline 	
+DeviceDesc & REG\_SZ & AMD Athlon 64 Processor\\
+\hline
+ConfigFlags & REG\_DWORD &  0x00000000 (0)\\
+\hline
+FriendlyName & REG\_SZ & AMD Athlon(tm) 64 Processor 3200+\\
+\hline  
+  
+  \end{tabular}
+  \label{tab:hwConfTab}
+\end{table}
+
+ 
+
+
+\newpage
+
+
+\item USB thumb drives, printers and other peripherials
+\begin{table}[ht]
+  \centering
+  \caption{USB thumb drives, printers and other peripherials}
+  \begin{tabular}{|l|l|l|}
+  \hline
+  Name & Type & Data\\
+  \hline
+  \hline
+  
+  DeviceDesc &	REG\_SZ &	CD-ROM Drive  \\
+  \hline
+LocationInformation &	REG\_SZ &	0 \\
+\hline
+Capabilities &	REG\_DWORD &	0x00000010 (16) \\
+\hline
+UINumber &	REG\_DWORD &	0x00000000 (0) \\
+\hline
+HardwareID &	REG\_MULTI\_SZ &	IDE/CdRomTSSTcorp\_CD/DVDW\_TS-L532R \\
+\hline
+\hline 	
+DeviceDesc &	REG\_SZ &	Disk drive \\
+\hline 	
+LocationInformation &	REG\_SZ &	0 \\
+\hline
+Capabilities &	REG\_DWORD &	0x00000000 (0) \\
+\hline
+UINumber &	REG\_DWORD &	0x00000000 (0) \\
+\hline
+HardwareID &	REG\_MULTI\_SZ &	IDE/DiskFUJITSU\_MHU2100AT\\
+\hline
+\hline 	 	
+DeviceDesc &	REG\_SZ &	Disk drive \\
+\hline 	
+LocationInformation &	REG\_SZ &	0 \\
+\hline 	
+Capabilities &	REG\_DWORD &	0x00000000 (0) \\
+\hline
+UINumber &	REG\_DWORD &	0x00000000 (0) \\
+\hline
+HardwareID &	REG\_MULTI\_SZ &	IDE/DiskST9808210A\\
+\hline  
+  
+  \end{tabular}
+  \label{tab:periphTab}
+\end{table}
+
+
+
+
+\item Software Installed on the laptop: it was e.g. Mozilla Firefox, Internet
+Explorer, Adobe Acrobat Reader, some apple plugins etc. 
+
+\begin{table}[ht]
+  \centering
+  \caption{Mozilla Firefox output registry - but this is registry for IE}
+  \begin{tabular}{|l|l|l|}
+  \hline
+  Name & Type & Data\\
+  \hline
+  \hline
+  SOFTWARE/Classes/MIME/Database/Content
+  Type/\ldots &	REG\_SZ &	.xpi  \\
+  \hline
+SOFTWARE/Classes/.htm &	REG\_SZ &	htmlfile  \\
+\hline
+SOFTWARE/Classes/.html &	REG\_SZ &	htmlfile  \\
+\hline
+SOFTWARE/Classes/HTTP/shell/open/command &	REG\_SZ & 	"C:/\ldots/iexplore.exe" -nohome\\
+\hline
+SOFTWARE/Clients/StartMenuInternet/ &	REG\_SZ &	IEXPLORE.EXE  \\
+\hline
+  
+  \end{tabular}
+  \label{tab:firefoxTab}
+\end{table}
+
+\newpage
+
+\item Screeen names and usernames: Administrator, ASPNET, Guest, HelpAssistant,
+kkkkkkkk
+\item Recently typed URLs
+\begin{table}[ht]
+  \centering
+  \caption{Recently typed URLs}
+  \begin{tabular}{|l|l|l|}
+  \hline
+  Name & Type & Data\\
+  \hline
+  \hline
+url1 & REG\_SZ & http://www.redlobster.com/\\
+  \hline
+url2 & REG\_SZ & www.mbna.com\\
+  \hline
+url3 & REG\_SZ & www.ebgames.com\\
+  \hline
+url4 & REG\_SZ & http://www.hotmail.com/\\
+  \hline
+url5 & REG\_SZ & www.wayport.com\\
+  \hline
+url6 & REG\_SZ & www.aol.com\\
+  \hline
+url7 & REG\_SZ & www.wamu.com\\
+  \hline
+url8 & REG\_SZ & www.hotmail.com\\
+  \hline
+url9 & REG\_SZ & http://www.ebgames.com/\\
+  \hline
+url10 & REG\_SZ & http://www.gamefaqs.com/\\
+  \hline
+url11 & REG\_SZ & http://www.aol.com/\\
+  \hline
+url12 & REG\_SZ & www.aol.co\\
+  \hline
+url13 & REG\_SZ & www.hushmail.com\\
+  \hline
+url14 & REG\_SZ & www.way.com\\ 
+\hline
+  
+  \end{tabular}
+  \label{tab:urlsTab}
+\end{table}
+\end{itemize}
+
+
+
+
+\section{Previous work}\label{previous work}
+A much longer \LaTeXe{} example was written by Gil~\cite{Gil:02}.
+
+\section{Results}\label{results}
+In this section we describe the results.
+
+\section{Conclusions}\label{conclusions}
+We worked hard, and achieved very little.
+
+
+
+\end{document}
+This is never printed

@@ -1,0 +1,65 @@
+\title{A Hacker's Registry}
+\author{
+        Martin Kozeny\\
+        CSCI 4623: Digital Forensics\\
+        Spring 2011
+        University of New Orleans
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+
+\begin{document}
+\maketitle
+
+
+
+\section{Recovery}
+Using AccessData's registry viewer, me and my colleague managed to get this
+information from a laptop belonging to the thief.
+
+\begin{itemize}
+  \item Time zone information
+  \begin{table}[ht]
+  \centering
+  \caption{Time zone information}
+  \begin{tabular}{|c|c|}
+  \hline
+    Last Written Time  & 4/2/2006 15:56:45 UTC  \\
+  \hline
+  Standard Start Date & Last Sun in Oct at 2:00:00 AM Local\\
+  \hline
+  Daylight Start Date & First Sun in Apr at 2:00:00 AM Local  \\ 
+  \hline
+  Standard Bias  & 0 \\ 
+  \hline
+  Daylight Bias & -60 \\ 
+  \hline
+  1 & 1\\ 
+  \hline
+  
+  
+  \end{tabular}
+  \label{tab:dataTab}
+\end{table} 
+\end{itemize}
+
+\paragraph{Outline}
+The remainder of this article is organized as follows.
+Section~\ref{previous work} gives account of previous work.
+Our new and exciting results are described in Section~\ref{results}.
+Finally, Section~\ref{conclusions} gives the conclusions.
+
+\section{Previous work}\label{previous work}
+A much longer \LaTeXe{} example was written by Gil~\cite{Gil:02}.
+
+\section{Results}\label{results}
+In this section we describe the results.
+
+\section{Conclusions}\label{conclusions}
+We worked hard, and achieved very little.
+
+
+
+\end{document}
+This is never printed
